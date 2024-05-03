@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- ERIC MEYER'S RESET CSS ---------- */
+/* ---------- https://meyerweb.com/eric/tools/css/reset/ ---------- */
+
+@import url(https://meyerweb.com/eric/tools/css/reset/reset.css);
+
+/* ---------- GENERAL ---------- */
+
+body {
+  background-color: #0a0a0a;
+  color: whitesmoke;
+  font: 1em Georgia, Times New Roman, Times, serif;
+  overflow-x: hidden;
+}
+
+p {
+  margin-bottom: 50px;
+}
+
+.container {
+  width: 100vw;
+}
+
+/* ---------- POEM ---------- */
+
+#poem {
+  color: whitesmoke;
+  font-family: Georgia;
+  margin: auto;
+  margin-top: 50px;
+  position: relative;
+  width: 600px;
+}
+
+#poem .open-quote {
+  background-color: #0a0a0a;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  display: block;
+  font-size: 120px;
+  height: 100px;
+  left: -135px;
+  position: absolute;
+  text-align: center;
+  width: 100px;
+}
+
+#poem blockquote {
+  font-size: 25px;
+  line-height: 1em;
+}
+
+#poem .blockquote-content {
+  border-left: 5px solid whitesmoke;
+  padding-left: 35px;
+}

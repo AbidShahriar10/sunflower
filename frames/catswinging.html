@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cat Swinging on String</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style-catswinging.css" />
+  </head>
+  <body>
+    <div class="music">
+      <p>Click to play or pause <i class="fa-solid fa-arrow-right-long"></i></p>
+      <i id="icon" class="fa-solid fa-heart-crack"></i>
+      <p id="pause">(Paused)</p>
+    </div>
+
+    <audio id="music1">
+      <source src="../music/miss.mp3" type="audio/mp3" />
+    </audio>
+    <audio id="music2">
+      <source src="../music/dream.mp3" type="audio/mp3" />
+    </audio>
+    <audio id="music3">
+      <source src="../music/arpeggio.mp3" type="audio/mp3" />
+    </audio>
+    <audio id="music4">
+      <source src="../music/pain.mp3" type="audio/mp3" />
+    </audio>
+    <audio id="music5">
+      <source src="../music/sad.mp3" type="audio/mp3" />
+    </audio>
+
+    <script>
+      var m1 = document.getElementById("music1");
+      var m2 = document.getElementById("music2");
+      var m3 = document.getElementById("music3");
+      var m4 = document.getElementById("music4");
+      var m5 = document.getElementById("music5");
+      var icon = document.getElementById("icon");
+      var pause = document.getElementById("pause");
+      var play = true;
+      icon.addEventListener("click", function () {
+        if (play) {
+          m1.play();
+          m1.addEventListener("ended", function () {
+            m2.play();
+          });
+          m2.addEventListener("ended", function () {
+            m3.play();
+          });
+          m3.addEventListener("ended", function () {
+            m4.play();
+          });
+          m4.addEventListener("ended", function () {
+            m5.play();
+          });
+          m5.addEventListener("ended", function () {
+            m1.play();
+          });
+          icon.classList.remove("fa-heart-crack");
+          icon.classList.add("fa-heart");
+          pause.innerHTML = "(Playing)";
+          play = false;
+        } else {
+          m1.pause();
+          m2.pause();
+          m3.pause();
+          m4.pause();
+          m5.pause();
+          icon.classList.remove("fa-heart");
+          icon.classList.add("fa-heart-crack");
+          pause.innerHTML = "(Paused)";
+          play = true;
+        }
+      });
+    </script>
+
+    <div class="all-wrap">
+      <div class="all">
+        <div class="yarn"></div>
+        <div class="cat-wrap">
+          <div class="cat">
+            <div class="cat-upper">
+              <div class="cat-leg"></div>
+              <div class="cat-leg"></div>
+              <div class="cat-head">
+                <div class="cat-ears">
+                  <div class="cat-ear"></div>
+                  <div class="cat-ear"></div>
+                </div>
+                <div class="cat-face">
+                  <div class="cat-eyes"></div>
+                  <div class="cat-mouth"></div>
+                  <div class="cat-whiskers"></div>
+                </div>
+              </div>
+            </div>
+            <div class="cat-lower-wrap">
+              <div class="cat-lower">
+                <div class="cat-leg">
+                  <div class="cat-leg">
+                    <div class="cat-leg">
+                      <div class="cat-leg">
+                        <div class="cat-leg">
+                          <div class="cat-leg">
+                            <div class="cat-leg">
+                              <div class="cat-leg">
+                                <div class="cat-leg">
+                                  <div class="cat-leg">
+                                    <div class="cat-leg">
+                                      <div class="cat-leg">
+                                        <div class="cat-leg">
+                                          <div class="cat-leg">
+                                            <div class="cat-leg">
+                                              <div class="cat-leg">
+                                                <div class="cat-paw"></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cat-leg">
+                  <div class="cat-leg">
+                    <div class="cat-leg">
+                      <div class="cat-leg">
+                        <div class="cat-leg">
+                          <div class="cat-leg">
+                            <div class="cat-leg">
+                              <div class="cat-leg">
+                                <div class="cat-leg">
+                                  <div class="cat-leg">
+                                    <div class="cat-leg">
+                                      <div class="cat-leg">
+                                        <div class="cat-leg">
+                                          <div class="cat-leg">
+                                            <div class="cat-leg">
+                                              <div class="cat-leg">
+                                                <div class="cat-paw"></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cat-tail">
+                  <div class="cat-tail">
+                    <div class="cat-tail">
+                      <div class="cat-tail">
+                        <div class="cat-tail">
+                          <div class="cat-tail">
+                            <div class="cat-tail">
+                              <div class="cat-tail">
+                                <div class="cat-tail">
+                                  <div class="cat-tail">
+                                    <div class="cat-tail">
+                                      <div class="cat-tail">
+                                        <div class="cat-tail">
+                                          <div class="cat-tail">
+                                            <div class="cat-tail">
+                                              <div class="cat-tail -end"></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/@reactivex/rxjs/dist/global/Rx.min.js"></script>
+    <script src="https://unpkg.com/rxcss@latest/dist/rxcss.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  </body>
+</html>

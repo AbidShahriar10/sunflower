@@ -1,0 +1,211 @@
+body {
+  background: #0a0a0a;
+  color: #e6dcdc;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+#credit {
+  position: absolute;
+  top: 13%;
+  font-family: "Swanky and Moo Moo", cursive;
+  font-size: 1.5vw;
+}
+#top {
+  background: #e6dcdc;
+  height: 8px;
+  width: 10%;
+  position: absolute;
+  top: 5%;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+#bottom {
+  background: #e6dcdc;
+  height: 8px;
+  width: 10%;
+  position: absolute;
+  bottom: 5%;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+.text {
+  position: absolute;
+  font-family: "Coming Soon", cursive;
+  font-size: 3.5vw;
+  top: 40%;
+  padding: 10px;
+}
+#title {
+  display: flex;
+  justify-content: center;
+  font-family: "Rock Salt", cursive;
+  font-size: 2em;
+}
+
+#brightens {
+  color: yellow;
+  animation: bright 2s linear infinite;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.5em;
+  display: inline-block;
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+#brightens:hover {
+  animation: none;
+  text-shadow: 8px 8px 8px #ffecb3;
+}
+#far {
+  color: hotpink;
+  letter-spacing: 0.3em;
+  display: inline-block;
+  -webkit-transform: translateY(-4px);
+  -moz-transform: translateY(-4px);
+  transform: translateY(-4px);
+}
+#far:hover {
+  -webkit-transform: none;
+  -moz-transform: none;
+  transform: none;
+}
+#time {
+  color: slateblue;
+  display: inline-block;
+  -webkit-transform: translateY(-4px);
+  -moz-transform: translateY(-4px);
+  transform: translateY(-4px);
+  animation: tick 1s linear infinite;
+}
+#cheers {
+  font-family: "Risque", cursive;
+  font-size: 1.5em;
+  color: yellow;
+  display: inline-block;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+#cheers:hover {
+  -webkit-transform: none;
+  -moz-transform: none;
+  transform: none;
+}
+#difficult {
+  font-family: "Ceviche One", cursive;
+  display: inline-block;
+  color: red;
+  font-size: 1.4em;
+}
+#difficult:hover {
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+}
+
+#high {
+  font-family: "Voltaire", sans-serif;
+}
+#high:hover {
+  animation: highUp 2s linear infinite;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in 1 forwards;
+}
+
+#animated
+{
+  font-family: 'Amatic SC', cursive;
+  font-size:1.5em;
+  color: red;
+  display:inline-block;
+}
+#animated::after
+{
+  content:"♡";
+  display:none;
+  color:pink;
+  animation:heart 1s linear;
+}
+#animated:hover::after
+{ 
+  display:inline;
+}
+#animated::before
+{
+  content:"♡";
+  display:none;
+  color:pink;
+  animation:heart 1s linear;
+}
+#animated:hover::before
+{ 
+  display:inline;
+}
+
+@keyframes highUp {
+  0% {
+    font-size: 1em;
+  }
+  50% {
+    font-size: 1.1em;
+  }
+  100% {
+    font-size: 1em;
+  }
+}
+
+@keyframes tick {
+  0% {
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes bright {
+  0% {
+    text-shadow: 1px 1px 8px #ffecb3;
+  }
+  50% {
+    text-shadow: 4px 4px 8px #ffecb3;
+  }
+  100% {
+    text-shadow: 1px 1px 8px #ffecb3;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

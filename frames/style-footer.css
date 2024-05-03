@@ -1,0 +1,464 @@
+body {
+  display: grid;
+  grid-template-rows: 1fr 10rem auto;
+  grid-template-areas: "main" "." "footer";
+  overflow-x: hidden;
+  background: #e6dcdc;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Open Sans", sans-serif;
+}
+body .footer {
+  z-index: 1;
+  --footer-background: #646fd4;
+  display: grid;
+  position: relative;
+  grid-area: footer;
+  min-height: 12rem;
+}
+body .footer .bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: var(--footer-background);
+  filter: url("#blob");
+}
+body .footer .bubbles .bubble {
+  position: absolute;
+  left: var(--position, 50%);
+  background: var(--footer-background);
+  border-radius: 100%;
+  -webkit-animation: bubble-size var(--time, 4s) ease-in infinite
+      var(--delay, 0s),
+    bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+  animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+    bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+  transform: translate(-50%, 100%);
+}
+body .footer .content {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 4rem;
+  padding: 2rem;
+  background: var(--footer-background);
+}
+
+body .footer .content h1 {
+  color: whitesmoke;
+  font-family: "Caveat", cursive;
+  font-size: 50px;
+}
+
+body .footer .content > div {
+  display: flex;
+  justify-content: center;
+}
+
+@-webkit-keyframes bubble-size {
+  0%,
+  75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
+}
+
+@keyframes bubble-size {
+  0%,
+  75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
+}
+@-webkit-keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
+}
+@keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
+}
+
+.container {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.grid {
+  width: 330px;
+  height: 330px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.cell {
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  background: whitesmoke;
+  color: #f62a65;
+  border-radius: 50%;
+  margin: 3px;
+  transform: scale(0.1);
+}
+
+.grid:nth-child(1) .cell:nth-child(12) {
+  color: black;
+  -webkit-animation: up 3s infinite;
+  animation: up 3s infinite;
+}
+
+.grid:nth-child(1) .cell:nth-child(13) {
+  color: black;
+  -webkit-animation: up 3s infinite;
+  animation: up 3s infinite;
+}
+
+.grid:nth-child(1) .cell:nth-child(14) {
+  color: black;
+  -webkit-animation: up 3s infinite;
+  animation: up 3s infinite;
+}
+
+.grid:nth-child(1) .cell:nth-child(15) {
+  color: black;
+  -webkit-animation: up 3s infinite;
+  animation: up 3s infinite;
+}
+
+.grid:nth-child(1) .cell:nth-child(16) {
+  color: black;
+  -webkit-animation: up 3s infinite;
+  animation: up 3s infinite;
+}
+
+.grid:nth-child(1) .cell:nth-child(23) {
+  color: black;
+  -webkit-animation: up 3s infinite;
+  animation: up 3s infinite;
+}
+
+.grid:nth-child(1) .cell:nth-child(32) {
+  color: black;
+  -webkit-animation: up 3s infinite;
+  animation: up 3s infinite;
+}
+
+.grid:nth-child(1) .cell:nth-child(41) {
+  color: black;
+  -webkit-animation: up 3s infinite;
+  animation: up 3s infinite;
+}
+
+.grid:nth-child(1) .cell:nth-child(50) {
+  color: black;
+  -webkit-animation: up 3s infinite;
+  animation: up 3s infinite;
+}
+
+.grid:nth-child(1) .cell:nth-child(57) {
+  color: black;
+  -webkit-animation: up 3s infinite;
+  animation: up 3s infinite;
+}
+
+.grid:nth-child(1) .cell:nth-child(58) {
+  color: black;
+  -webkit-animation: up 3s infinite;
+  animation: up 3s infinite;
+}
+
+.grid:nth-child(1) .cell:nth-child(59) {
+  color: black;
+  -webkit-animation: up 3s infinite;
+  animation: up 3s infinite;
+}
+
+.grid:nth-child(1) .cell:nth-child(60) {
+  color: black;
+  -webkit-animation: up 3s infinite;
+  animation: up 3s infinite;
+}
+
+.grid:nth-child(1) .cell:nth-child(61) {
+  color: black;
+  -webkit-animation: up 3s infinite;
+  animation: up 3s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(12) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(13) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(15) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(16) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(20) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(21) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(22) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(23) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(24) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(25) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(26) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(29) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(30) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(31) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(32) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(33) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(34) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(35) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(39) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(40) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(41) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(42) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(43) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(49) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(50) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(51) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(2) .cell:nth-child(59) {
+  -webkit-animation: up 3s 0.25s infinite;
+  animation: up 3s 0.25s infinite;
+}
+
+.grid:nth-child(3) .cell:nth-child(12) {
+  color: black;
+  -webkit-animation: up 3s 0.5s infinite;
+  animation: up 3s 0.5s infinite;
+}
+
+.grid:nth-child(3) .cell:nth-child(16) {
+  color: black;
+  -webkit-animation: up 3s 0.5s infinite;
+  animation: up 3s 0.5s infinite;
+}
+
+.grid:nth-child(3) .cell:nth-child(21) {
+  color: black;
+  -webkit-animation: up 3s 0.5s infinite;
+  animation: up 3s 0.5s infinite;
+}
+
+.grid:nth-child(3) .cell:nth-child(25) {
+  color: black;
+  -webkit-animation: up 3s 0.5s infinite;
+  animation: up 3s 0.5s infinite;
+}
+
+.grid:nth-child(3) .cell:nth-child(30) {
+  color: black;
+  -webkit-animation: up 3s 0.5s infinite;
+  animation: up 3s 0.5s infinite;
+}
+
+.grid:nth-child(3) .cell:nth-child(34) {
+  color: black;
+  -webkit-animation: up 3s 0.5s infinite;
+  animation: up 3s 0.5s infinite;
+}
+
+.grid:nth-child(3) .cell:nth-child(39) {
+  color: black;
+  -webkit-animation: up 3s 0.5s infinite;
+  animation: up 3s 0.5s infinite;
+}
+
+.grid:nth-child(3) .cell:nth-child(43) {
+  color: black;
+  -webkit-animation: up 3s 0.5s infinite;
+  animation: up 3s 0.5s infinite;
+}
+
+.grid:nth-child(3) .cell:nth-child(48) {
+  color: black;
+  -webkit-animation: up 3s 0.5s infinite;
+  animation: up 3s 0.5s infinite;
+}
+
+.grid:nth-child(3) .cell:nth-child(52) {
+  color: black;
+  -webkit-animation: up 3s 0.5s infinite;
+  animation: up 3s 0.5s infinite;
+}
+
+.grid:nth-child(3) .cell:nth-child(57) {
+  color: black;
+  -webkit-animation: up 3s 0.5s infinite;
+  animation: up 3s 0.5s infinite;
+}
+
+.grid:nth-child(3) .cell:nth-child(58) {
+  color: black;
+  -webkit-animation: up 3s 0.5s infinite;
+  animation: up 3s 0.5s infinite;
+}
+
+.grid:nth-child(3) .cell:nth-child(59) {
+  color: black;
+  -webkit-animation: up 3s 0.5s infinite;
+  animation: up 3s 0.5s infinite;
+}
+
+.grid:nth-child(3) .cell:nth-child(60) {
+  color: black;
+  -webkit-animation: up 3s 0.5s infinite;
+  animation: up 3s 0.5s infinite;
+}
+
+.grid:nth-child(3) .cell:nth-child(61) {
+  color: black;
+  -webkit-animation: up 3s 0.5s infinite;
+  animation: up 3s 0.5s infinite;
+}
+
+@-webkit-keyframes up {
+  30% {
+    background-color: currentColor;
+    transform: scale(1);
+  }
+  80% {
+    background: black;
+    transform: scale(0.1);
+  }
+}
+
+@keyframes up {
+  30% {
+    background-color: currentColor;
+    transform: scale(1);
+  }
+  80% {
+    background: black;
+    transform: scale(0.1);
+  }
+}

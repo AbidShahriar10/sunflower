@@ -1,0 +1,39 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #e6dcdc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.wrapper-no7 {
+  display: flex;
+  justify-content: center;
+}
+.wrapper-no7 .animation-wrapper {
+  display: flex;
+}
+
+.wrapper-no7 .cat {
+  width: 80%;
+  overflow: visible;
+}
+.wrapper-no7 .cat-wrapper {
+  width: 300px;
+}
+.wrapper-no7 .eyes circle {
+  fill: #fff;
+}
+.wrapper-no7 .frontlegs,
+.wrapper-no7 .backlegs {
+  opacity: 1;
+}
+.wrapper-no7 .logoani img {
+  align-self: flex-end;
+  margin-left: -75px;
+  margin-top: 140px;
+  width: 100px;
+  height: 100px;
+}
